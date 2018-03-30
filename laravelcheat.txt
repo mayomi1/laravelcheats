@@ -1,0 +1,97 @@
+                                                                                                                                                                                   
+  [Illuminate\Database\QueryException]                                                                                                                                               
+  SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`  
+ com ))                                                                                                                                                                                 
+                                                                                                                                                                                     
+
+                                                                                                             [PDOException]                                                                                                   
+  SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes  
+                                                                                                                   
+fix this error this 'Schema::defaultStringLength(191);' paste it inside the AppServiceProvicer.php under providers folder...
+
+                                                                                                                                  
+  [Illuminate\Database\QueryException]                                                                                            
+  could not find driver (SQL: select * from information_schema.tables where table_schema = practise and table_name = migrations)  
+                                                                                                                                  
+
+                         
+  [PDOException]         
+  could not find driver  
+
+fix this error by installing 'sudo apt-get install php-gd php-mysql'
+
+to create model as well as migration do 'php artisan make:model <Model_name_in_Cap> -m'
+
+php artisan make:controller ProductController --resource to make a route that do CRUD
+
+add this to the web route
+Route::resource('products','ProductController');
+
+to see the list of all the route
+php artisan route:list
+
+
+
+PHP Warning:  require(/opt/lampp/htdocs/laracast-clone/vendor/autoload.php): failed to open stream: No such file or directory in /opt/lampp/htdocs/laracast-clone/artisan on line 18
+PHP Fatal error:  require(): Failed opening required '/opt/lampp/htdocs/laracast-clone/vendor/autoload.php' (include_path='.:/usr/share/php') in /opt/lampp/htdocs/laracast-clone/artisan on line 18
+
+solve this error : composer update
+
+Whoops, looks like something went wrong.:=>
+check if the .env file is there if not add it by copying the content of .env.example 
+
+To generate laravel key
+php artisan key:generate
+
+
+
+                                                                                            
+  [Illuminate\Database\QueryException]                                                       
+  SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YE  
+  S) (SQL: select * from information_schema.tables where table_schema = homestead and table  
+  _name = migrations)                                                                        
+                                                                                             
+
+                                                                                             
+  [PDOException]                                                                             
+  SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YE  
+  S)   
+
+check your mysql connection conf @ .env
+
+
+//////////////////////////////////////////
+multiple auth() with laravel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
